@@ -72,6 +72,7 @@ def simulate_cdn_logs(iteration_count):
     
     cdn_log_count = len(cdn_logs)
     cdn_logs      = '\n'.join( cdn_logs )
+    print('[ INFO ] Simulated {} records'.format(cdn_log_count) )
     return cdn_logs, cdn_log_count
 
 
@@ -87,7 +88,7 @@ def write_str_to_gcs(bucket_name, blob_str):
     bucket_filename = 'cdn_log_{}.txt'.format( datetime.datetime.now().strftime('%Y%m%d_%H%M%S') )
     blob = Blob(bucket_filename, bucket) # encryption_key=encryption_key)
     blob.upload_from_string( blob_str )
-    print('[ INFO ] Wrote {} cdn logs to gs://{}/{}'.format(len(blob_str), bucket_name, bucket_filename) )
+    print('[ INFO ] Wrote cdn logs to gs://{}/{}'.format(bucket_name, bucket_filename) )
 
 
 
@@ -110,6 +111,8 @@ if __name__ == "__main__":
     
     # # Write cdn_logs string blob storage in Google Cloud Storage
     write_str_to_gcs(args['bucket_name'], cdn_logs)
+    
+    print('[ INFO ] Simulation Complete')
 
 
 
