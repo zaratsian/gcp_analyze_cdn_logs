@@ -3,7 +3,7 @@
 #
 #   Simulate CDN Logs
 #
-#   USAGE:
+#   USAGE: file.py --bucket_name BUCKET_NAME --iteration_count ITERATION_COUNT
 #
 #####################################################################################
 
@@ -13,6 +13,7 @@ import re
 import json
 import datetime,time
 import random
+import argparse
 from google.cloud.storage import Blob
 from google.cloud import storage
 
@@ -100,8 +101,8 @@ if __name__ == "__main__":
     
     # Arguments
     ap = argparse.ArgumentParser()
-    ap.add_argument("--bucket_name",     required=True, help="Google Cloud Storage bucket name")
-    ap.add_argument("--iteration_count", required=True, help="Number of CDN logs to simulate")
+    ap.add_argument("--bucket_name",     required=True, type=str, help="Google Cloud Storage bucket name")
+    ap.add_argument("--iteration_count", required=True, type=int, help="Number of CDN logs to simulate")
     args = vars(ap.parse_args())
     
     # Simulate CDN Logs
