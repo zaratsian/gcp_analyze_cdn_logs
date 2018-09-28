@@ -4,6 +4,7 @@
 #   Simulate CDN Logs
 #
 #   USAGE: file.py --bucket_name BUCKET_NAME --iteration_count ITERATION_COUNT
+#          file.py --bucket_name=cdn_logs_z2018 --iteration_count=100
 #
 #####################################################################################
 
@@ -35,9 +36,9 @@ def simulate_cdn_logs(iteration_count):
     
     for i in range(iteration_count):
         
-        simulated_date = (2018, 9, random.randint(1,30), random.randint(0,23), random.randint(0,59), random.randint(0,59), 1,1,1 ) #(2018, 9, 17, 17, 3, 38, 1, 48, 0)
-        unix_datetime  = int(time.mktime(datetime.datetime.now().timetuple()))
-        elaspsed_time = int(random.triangular(0,100, 50))
+        simulated_date = (2018, 9, random.randint(1,30), random.randint(0,23), random.randint(0,57), random.randint(0,59), 1,1,1 ) #(2018, 9, 17, 17, 3, 38, 1, 48, 0)
+        unix_datetime  = int(time.mktime( simulated_date )) #datetime.datetime.now().timetuple()))
+        elaspsed_time  = int(random.triangular(0,100, 50))
         
         xcache_state = random.choice(['MISS']*8 + ['HIT']*2)
         
