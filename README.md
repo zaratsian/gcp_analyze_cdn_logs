@@ -7,7 +7,12 @@ This repo provides sample code, demonstrating how to process CDN logs on <a href
 <br>&nbsp;&nbsp;&nbsp;&nbsp;3) The parses logs are written back to Cloud Storage as a delimited json file.
 <br>&nbsp;&nbsp;&nbsp;&nbsp;4) A second Cloud Function is triggered once the json is created, which loads the logs into BigQuery.
 <br>&nbsp;&nbsp;&nbsp;&nbsp;5) BigQuery is used for data exploration and analysis (Data Studio can be used for visualization).
-<br>&nbsp;&nbsp;&nbsp;&nbsp;6) ML models (built using Cloud ML, sklearn or tensorflow) are used to detect anonalies and trends.
+<br>&nbsp;&nbsp;&nbsp;&nbsp;6) ML models (built using Cloud ML, sklearn or tensorflow) are used to detect anonalies and identify trends.
 <br>
-<br><b>References:</b>
+<br><b>Reference Architecture:</b>
+<br><img src="screenshots/Screenshot 2018-10-01 at 10.56.26 AM.png" class="inline"/>
 <br>
+<br><b>Data Studio Dashboard (quick mock up):
+<br><img src="screenshots/Screenshot 2018-10-01 at 10.57.36 AM.png" class="inline"/>
+<br>
+
