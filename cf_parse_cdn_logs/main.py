@@ -15,9 +15,9 @@ def parse_cdn_log(data, context):
     from google.cloud import bigquery
      
     # Used for Testing
-    #data = {'bucket':'cdn_logs_z2018','name':'cdn_logs.txt'}
+    #data = {'bucket':'cdn_logs_z2018','name':'cdn_logs.log'}
     
-    if re.search('\.txt$', data['name']):
+    if re.search('\.log$', data['name']):
         
         client  = storage.Client()
         bucket  = client.get_bucket(data['bucket'])
@@ -94,6 +94,6 @@ geo_region=(.+)\
         # Load delimited json records to Google Cloud Storage
         client = storage.Client()
         bucket = client.get_bucket(data['bucket'])
-        blob   = bucket.blob(data['name'].replace('.txt','.json'))
+        blob   = bucket.blob(data['name'].replace('.log','.json'))
         blob.upload_from_string(data=json_records, content_type='text/plain')
-        print('Created gs://{}/{}'.format(data['bucket'], data['name'].replace('.txt','.json') ))
+        print('Created gs://{}/{}'.format(data['bucket'], data['name'].replace('.log','.json') ))
