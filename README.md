@@ -11,7 +11,7 @@ This repo provides sample code, demonstrating how to process CDN logs on <a href
 <br>
 <br><img src="screenshots/Screenshot 2018-10-02 at 12.48.55 PM.png" class="inline"/>
 <br>
-<br><b>Data Studio Dashboard (quick mock up):
+<br><b>Data Studio Dashboard (quick mock up):</b>
 <br><img src="screenshots/Screenshot 2018-10-02 at 1.42.48 PM.png" class="inline"/>
 <br>
 <br><b>Setup and Execution</b> (... in progress ...)
