@@ -345,7 +345,7 @@ def simulate_cdn_logs(iteration_count):
         cdn_log += 't_ttfb={} '.format( round((int(random.triangular(0,100,20)) / 1000), 4) )
         cdn_log += 't_start={} '.format( unix_datetime - elaspsed_time )
         cdn_log += 't_end={} '.format( unix_datetime )
-        cdn_log += 'req_ip={} '.format( '104.237.{}.{}'.format(random.randint(1,254), random.randint(1,254)) )
+        cdn_log += 'req_ip={} '.format( '104.237.101.205' if (i%int(iteration_count*0.05)==0) else '104.237.{}.{}'.format( int(random.triangular(110,130,110)), random.randint(1,254)) )
         cdn_log += 'req_method={} '.format( 'GET' )
         cdn_log += 'req_host={} '.format( 'www.cnn.com' )
         #cdn_log+= 'req_url={} '.format( '/2018/09/{}/{}/'.format( random.randint(10,30), random.choice(['us','world','politics','opinions','health','entertainment','tech','style','travel','sports']) ) )
@@ -385,7 +385,7 @@ def write_str_to_gcs(bucket_name, blob_str):
     client = storage.Client()
     bucket = client.get_bucket(bucket_name)
     #encryption_key = 'c7f32af42e45e85b9848a6a14dd2a8f6'
-    bucket_filename = 'cdn_log_{}.txt'.format( datetime.datetime.now().strftime('%Y%m%d_%H%M%S') )
+    bucket_filename = 'cdn_log_{}.log'.format( datetime.datetime.now().strftime('%Y%m%d_%H%M%S') )
     blob = Blob(bucket_filename, bucket) # encryption_key=encryption_key)
     blob.upload_from_string( blob_str )
     print('[ INFO ] Wrote cdn logs to gs://{}/{}'.format(bucket_name, bucket_filename) )
