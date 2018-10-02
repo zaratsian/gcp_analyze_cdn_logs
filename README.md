@@ -13,6 +13,6 @@ This repo provides sample code, demonstrating how to process CDN logs on <a href
 <br><img src="screenshots/Screenshot 2018-10-01 at 10.56.26 AM.png" class="inline"/>
 <br>
 <br><b>Data Studio Dashboard (quick mock up):
-<br><img src="screenshots/Screenshot 2018-10-01 at 10.57.36 AM.png" class="inline"/>
+<br><img src="screenshots/Screenshot 2018-10-02 at 11.14.24 AM.png" class="inline"/>
 <br>
 
