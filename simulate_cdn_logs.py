@@ -37,6 +37,7 @@ def simulate_cdn_logs(iteration_count):
     
     urls =  ["/2018/08/08/technology/deepfakes-countermeasures-facebook-twitter-youtube/index.html"]*10 + \
             ["/2018/09/28/technology/tesla-stock-analysts/index.html"]*8 + \
+            ["/2018/10/01/health/infection-death-hurricane-florence/index.html"]*7 + \
             [
             "/2018/10/01/us/allentown-pennsylvania-explosion-victims/index.html",
             "/2018/10/02/us/allentown-pennsylvania-car-explosion-investigation/index.html",
