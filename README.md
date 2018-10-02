@@ -24,5 +24,5 @@ This repo provides sample code, demonstrating how to process CDN logs on <a href
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Create a Google Cloud Storage called "cdn_logs_z2018"
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Create a Cloud Function to parse_cdn_logs (code <a href="https://github.com/zaratsian/gcp_analyze_cdn_logs/tree/master/cf_parse_cdn_logs")here</a>)
   8"
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Create a Cloud Function to load_to_bq (code <a href="https://github.com/zaratsian/gcp_analyze_cdn_logs/tree/master/cf_load_to_bq")here</a>)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Create a Cloud Function to load_to_bq (<a href="https://github.com/zaratsian/gcp_analyze_cdn_logs/tree/master/cf_load_to_bq">code here</a>)
   <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;Simulate logs using this <a href="https://github.com/zaratsian/gcp_analyze_cdn_logs/blob/master/simulate_cdn_logs.py">code</a> (which will simulate data and write it to Cloud Storage)
